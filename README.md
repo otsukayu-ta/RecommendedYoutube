@@ -8,6 +8,7 @@
 |email|string|null: false|
 |password|string|null: false|
 |gender|string|
+|genser|string|
 |avator|text|
 
 ### Association
@@ -35,13 +36,24 @@
 - has_many :post_genres
 - has_many :genres,through::post_genres
 - belong_to :user
-## messagesテーブル
+
+## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text| |
-|image|string| |
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :group
+- belongs_to :post
+
+## likesテーブル
+|user_id|integer|foreign_key: true|
+|post_id|integer|foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :post
+
+## relationships
+- belongs_to :user
+- belongs_to :follow, class_name:'User'
