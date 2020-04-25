@@ -4,33 +4,37 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null:false|
+|nickname|string|null:false|
 |email|string|null: false|
 |password|string|null: false|
-### Association
-- has_many :messages
-- has_many :groups_users
-- has_many :groups, through: :groups_users
+|gender|string|
+|avator|text|
 
-## groups_usersテーブル
+### Association
+- has_many :posts
+- has_many :comments
+- has_many :likes
+- has_many :has_many :liked_posts, through: :likes, source: :post
+- has_many :relationships
+- has_many :followings, through: :relationships, source: :follow
+- has_many :reverse_of_relationships, class_name: 'Relationhip',foreign_key: 'follow_id'
+- has_many :followers, through: :reverse_of_relationships, source: :user
+
+
+## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|title|text|null: false| 
+|youtube_url|string|null: false|
+|message|text| |
+|user_id|integer|null:false|
 ### Association
-- belongs_to :user
-- belongs_to :group
-
-
-## groupsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false| 
-### Association
-- has_many :messages
-- has_many :groups_users
-- has_many :users, through:  :groups_users
-
+- has_many :comments
+- has_many :likes
+- has_many :liked_posts, through: :likes, source: :user
+- has_many :post_genres
+- has_many :genres,through::post_genres
+- belong_to :user
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
