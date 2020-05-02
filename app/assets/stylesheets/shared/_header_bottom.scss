@@ -1,13 +1,14 @@
 .header_bottom{
- background-color: #ffffff;
+ background-color: #2f5167;
  height:70px;
  
  &__category{
   padding: 20px 0 0 40px;
+  width: 250px;
   font-size: 30px;
   font-weight: bold;
   font-family: sans-serif;
   font-style: italic;
-  color: black;
+  color: rgb(240, 233, 233);
  }
 }
