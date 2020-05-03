@@ -1,7 +1,19 @@
 * {
   box-sizing: border-box;
+  font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
 }
 .main{
-  background-color: #bdf7f1;
-  height:600px;
+  padding: 90px 80px;
+
+&__message {
+  font-size: 70px;
+  color:#635d5d;
+}
+&__message span{
+  color:#ff4a4a;
+}
+&__message h1{
+  font-size: 50px;
+  padding-top: 20px;
+}
 }
