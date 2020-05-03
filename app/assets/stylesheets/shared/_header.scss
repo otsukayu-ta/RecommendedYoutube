@@ -9,25 +9,22 @@
 }
 
 .header-title{
- font-size: 52px;
+ font-size: 48px;
  font-family: Impact, 'Arial Narrow Bold', sans-serif;
  font-style: italic;
  color: rgb(240, 44, 44);
- padding: 0.3em 0.6em;
- margin: 0.32em ;
+ padding: 0.3em 0.25em;
+ margin: 0.34em ;
  font-weight: bold;
  background:white;
- border: solid 12px yellow;/*線*/
- border-radius: 10px; /*角の丸み*/
+ border: solid 12px yellow;
+ border-radius: 10px;
 }
-header-title{
-  margin: 0; 
-  padding: 0;
-}
+
 .logo-img{
   height:150px;
   width: 335px;
-  padding: 0 30px 3px 0;
+  padding: 0 20px 3px 0;
   }
 
 ul{
@@ -36,7 +33,7 @@ ul{
 }
 
 li{
-  padding:90px 24px 0 0px;
+  padding:90px 28px 0 10px;
   font-weight: bold;
   color: rgba(252, 250, 250, 0.904);
   }
